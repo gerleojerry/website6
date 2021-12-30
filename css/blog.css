@@ -1,0 +1,108 @@
+.main-header h1 {
+  width: 75%;
+  margin: auto;
+}
+
+.blog .row {
+  display: grid;
+  grid-template-columns: 6.5fr 3.5fr;
+  grid-gap: 2rem;
+}
+
+.blog h3{
+  color: var(--light);
+}
+
+.blog .row p {
+  color: var(--light);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.blog .comment {
+  margin-top: 3rem;
+  border: 1px solid var(--light);
+  padding: 2rem;
+  width: 70%;
+}
+
+
+.blog .comment form {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.blog .row div img {
+  max-width: 100%;
+}
+
+.form-element {
+  display: flex;
+  align-items:  center;
+  cursor: pointer;
+  border: 1px solid var(--light);
+  padding-left: .4rem;
+  margin-bottom: .7rem;
+}
+
+
+.blog form input, .blog form textarea{
+  display: block;
+  padding: .5rem;
+  width: 100%;
+  margin-bottom: .6rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color : var(--light);
+}
+
+.blog form button {
+  padding: .5rem;
+  margin-bottom: .5rem;
+  font-size: 1.3rem;
+  background-color: var(--primary-color);
+  border: 1px solid silver;
+  color: var(--light);
+  border-radius: 4px;
+  outline: none;
+  margin-top: .8rem;
+}
+
+.blog .form-element .icon  {
+  font-size: 1.6rem;
+  color: white;
+}
+
+
+section .row h3 {
+  margin: 0;
+}
+
+.categories_heading {
+  background-color: var(--primary-color);
+  padding: .5rem;
+  color: var(--light);
+  text-align: center;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--light);
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--light);
+  cursor: pointer;
+}
+
+.category:last-child {
+  border-bottom: 1px solid var(--light);
+}
+
+.category div, .category  a { 
+  color: var(--light);
+  font-size: 1.3rem;
+  text-decoration:none;
+}

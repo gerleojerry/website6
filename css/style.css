@@ -1,0 +1,480 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  transition: all 250ms ease;
+  color:var(--black)
+}
+
+:root {
+  --primary-color: #f44336;
+  --black :  #123;
+  --primary-transparent :  #f4433699;
+  --grey: #456;
+  --light: #ede;
+}
+
+html {
+  font-size : 87.5%;
+  scroll-padding-top: 10rem;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.icons {
+  color : white;
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.burger {
+  width: 1.6rem;
+  cursor: pointer;
+}
+
+.burger , .cancel {
+  display: none;
+}
+
+.burger > div {
+  height: 2px;
+  width: 100%;
+  margin: .35rem 0;
+  background-color: white;
+}
+
+.cancel {
+  font-size:  1.6rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.main-header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient( rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../images/banner.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .7rem 0;
+}
+
+
+.main-header .logo {
+  width: 10rem;
+}
+
+.main-header ul {
+  list-style-type: none;
+}
+
+.main-header li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.main-header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+
+.main-header li::after {
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: .4rem auto;
+  transition: all 300ms ease;
+}
+
+.main-header li:hover::after {
+  width: 100%;
+}
+
+.main-header .text-box {
+  width: 80%;
+  color: white;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main-header .text-box h1 {
+    font-size:2.5rem;
+    margin: 2.5rem 0;
+    color: white;
+}
+
+.main-header .text-box p {
+  margin: .7rem 0 3rem 0 ;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.main-header .hero-btn {
+  padding : .7rem;
+  border: 1px solid silver;
+  margin: 2rem 0;
+  background-color : var(--primary-color);
+  text-transform: uppercase;
+}
+
+.main-header .hero-btn:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid silver;
+}
+
+/* general styling for all the sections  */
+
+section .container {
+  padding: 3rem 0;
+}
+
+section h2 , section h2 {
+  margin: 1rem 0 1.5rem 0;
+  font-size: 2.3rem;
+  color: var(--light);
+}
+
+section p , section p {
+  font-size: 1.25rem;
+  color: var(--light);
+}
+
+section .row{
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+section .row h3 {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+}
+
+section .row p {
+  font-size: 1.2rem;
+  color: var(--black);
+}
+
+
+/* THIS IS THE COURSE SECTION.  */
+
+.course {
+  background-color: var(--light);
+  padding: 4rem 0;
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100% )
+}
+
+
+.course .course-col {
+  padding: 1.4rem;
+  border: 1px solid silver;
+  text-align:  left;
+  border-radius: .4rem;
+  box-shadow: 5px 6px 1rem rgba(0, 0, 0, .2);
+  background-color: white;
+}
+
+.course h2 , .course p {
+  color: var(--black);
+}
+
+.course .row .course-col:hover {
+  animation: vibrate 200ms ease;
+  animation-fill-mode: forwards;
+}
+
+/* THIS IS THE END OF THE COURSE SECTION.  */
+
+
+/* THIS IS THE START OF THE CAMPUS SECTION.  */
+
+.campus {
+  padding-bottom: 20rem 0;
+  position :relative;
+  background-color: var(--grey);
+  overflow: hidden;
+}
+.campus .row .campus-col {
+  padding: 0;
+  cursor: pointer;
+  position : relative;
+  overflow: hidden;
+}
+.campus .row img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid silver;
+}
+
+.campus .layer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 101%;
+  left: 0;
+  background-color: var(--primary-transparent);
+  padding: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.campus .layer h2 {
+  color: var(--black);
+  font-size: 2rem;
+}
+
+.campus .campus-col:hover .layer {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+/* THIS IS THE END  OF THE CAMPUS SECTION  */
+
+/* THIS IS THE START OF THE FACILITY SECTION   */
+.facility {
+  background-color: var(--light);
+  padding-bottom: 10rem;
+  clip-path: polygon( 0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+
+.facility .facility-col {
+  background-color: white;
+  padding: .4rem;
+  border-radius: 15px;
+
+}
+
+.facility .card-title , .facility .card-body {
+  padding: 0 1rem ;
+}
+.facility .card-body {
+  padding-bottom: 2.3rem;
+}
+.facility img  {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.facility p, .facility h2, .facility h3 {
+  color: var(--black);
+}
+
+/* THIS IS THE END OF THE FACILITY OF SECTION  */
+
+/* THIS IS THE START OF THE TESTIMONIAL SECTION  */
+.testimonial {
+  background-color: var(--grey);
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+}
+.testimonial .testimonial-col {
+  gap: 1.3rem;
+  display: flex;
+  background-color: var(--light);
+  border-right: 2px solid var(--grey);
+  padding: 1.4rem;
+}
+.testimonial img {
+  width: 5rem;
+  height: 5rem;
+  margin: 0.1rem .5rem;
+  border-radius: 5rem;
+}
+
+.stars .icon {
+  color: red;
+  font-size: 1rem;
+}
+
+/* THIS IS THE END OF THE TESTIMONIAL SECTION  */
+
+/* THIS IS THE START OF THE CONTACT SECTION  */
+
+.contact {
+  background-color: var(--light);
+  border-top : 2px solid silver;
+  padding: 2rem;
+  text-align:center;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact h2 {
+  color: var(--black);
+  font-size: 1.9rem;
+}
+
+.contact a {
+  border: 1px solid silver;
+  background-color: var(--primary-color);
+  color: var(--light);
+  text-decoration: none;
+  padding: .5rem 1rem;
+  font-size: 1.3rem;
+  margin: 2rem auto 1rem auto;
+  display: block;
+  width: 10rem;
+}
+
+/* THIS IS THE END OF THE CONTACT SECTION  */
+
+/* THIS IS THE START OF THE ABOUT SECTION  */
+
+.about {
+  background-color: var(--grey);
+  padding: 1rem 0;
+  clip-path: polygon( 0 7%, 100% 0 , 100% 93%, 0 100%)
+}
+
+.about .social {
+  margin-top: 2.5rem;
+}
+
+.about .social .icon {
+  font-size: 2rem;
+  margin-right: 1rem; 
+  
+}
+
+
+/* THIS IS THE END OF THE ABOUT SESSION  */
+
+/* THIS IS THE START OF THE FOOTER  */
+
+footer {
+  background-color: var(--light);
+  height:  6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* THIS IS THE END OF THE FOOTER  */
+/* Animations of the page. */
+
+@keyframes vibrate {
+  0%, 100% {
+    transform: scale(1)
+  }
+
+  60% {
+    transform: scale(1.02)
+  }
+
+  80% {
+    transform: scale(.98)
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 75%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+ 
+}
+
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 70%;
+  }
+
+  .cancel {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: block;
+  }
+
+  .main-header nav {
+    margin-top: 1.5rem;
+    width: 100%;
+    position : absolute;
+    background-color: var(--primary-color);
+    width: 200px;
+    top: -20px;
+    right: -200px;
+    z-index: 10;
+  }
+
+  .main-header ul {
+    width: 100%;
+    padding-top: 3rem;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .main-header li {
+    display: block;
+    padding: .6rem;
+    margin: .4rem 0;
+    text-align:center;
+    border-bottom: 1px solid silver;
+  }
+
+  .main-header li a {
+    font-weight: bold;
+  }
+
+  .main-header .text-box h1 {
+    margin: 2rem 0;
+  }
+
+
+  section .row {
+    flex-direction : column;
+
+  }
+  .course .row .course-col , section .row > div {
+    width: 85%;
+    margin: auto;
+  }
+
+  .campus .row .campus-col {
+    height: 25rem;
+  }
+
+  .facility img {
+    height: 25rem;
+    margin: auto;
+    display: block;
+  }
+
+}

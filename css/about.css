@@ -1,0 +1,62 @@
+body {
+  background-color: #456;
+}
+
+.main-header {
+  background: linear-gradient( to left , rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg');
+  background-position:center;
+  background-size: cover;
+  min-height: 50vh;
+  height: 70vh;
+  clip-path: polygon( 0 0 , 100% 0, 100% 90%, 50% 100%, 0 90% );
+}
+
+.main-header nav li>a {
+  color: white;
+}
+
+.main-header .header-content {
+  color :white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+}
+
+.about div img {
+  max-width: 100%;
+  display: block;
+
+}
+
+.about .row div {
+  flex: 1;
+}
+
+.about .row h2 {
+  font-size: 2.2rem;
+}
+
+.about .row p {
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.about .social {
+  text-align: center;
+}
+
+.about .social .icon {
+  font-size: 2.5rem;
+  margin-inline: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--grey);
+  color: var(--white);
+  margin-top: 2rem;
+}
